@@ -10,7 +10,7 @@ A raw sbt build has six components:
 1. A `Settings.scala` file in the project folder, holding dependency versions 
 1. A `build.sbt` file in the root folder
 
-The `.gitignore` and `build.properties` files are pretty standard for a Scala/sbt project, so they won't be covered here. Adding plugins to sbt increases the startup time, that's why it is recommended to use the command line for formatting the code. 
+The `.gitignore` and `build.properties` files are pretty standard for a Scala/sbt project, so they won't be covered here. Adding plugins to sbt increases the startup time, that's why it is recommended to use the command line for formatting the code. The end state of the project at this stage can be seen in the `1.1_buildfiles` branch. 
 
 ### Adding Lagom to the build
 
