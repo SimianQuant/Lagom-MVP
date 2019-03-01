@@ -1,7 +1,7 @@
 Build Structure
 ===
 
-A raw sbt build has six components:
+A raw sbt build has six files:
 
 1. A `.gitignore` file in the root folder 
 1. A `build.properties` file in the project subfolder, with the sbt version
@@ -10,7 +10,7 @@ A raw sbt build has six components:
 1. A `Settings.scala` file in the project folder, holding dependency versions 
 1. A `build.sbt` file in the root folder
 
-The `.gitignore` and `build.properties` files are pretty standard for a Scala/sbt project, so they won't be covered here. Adding plugins to sbt increases the startup time, that's why it is recommended to use the command line for formatting the code. The end state of the project at this stage can be seen in the `1.1_buildfiles` branch. 
+The `.gitignore` and `build.properties` files are pretty standard for a Scala/sbt project, so they won't be covered here. Adding plugins to sbt increases the startup time, that's why it is recommended to use the command line for formatting the code. The end state of the project at this stage can be seen in the [`1.1_buildfiles`](https://github.com/SimianQuant/Lagom-MVP/tree/1.1_buildfiles) branch. 
 
 ### Adding Lagom to the build
 
@@ -72,7 +72,7 @@ object Settings {
 ### Configuring the subprojects
 
 The main subprojects and their dependencies are, by convention, in the `build.sbt` file. Seperating the dependency versions and common settings makes 
-this file much cleaner. Since the microservice will record the user's mood, the API and implementation subproject names are prefixed with mood. Since this project is going to use neither Cassandra nor Kafka, they are disabled in the build to save some time at application startup. 
+this file much cleaner. Since the microservice will record the user's mood, the API and implementation subproject names are prefixed with **mood**. Since this project is going to use neither Cassandra nor Kafka, they are disabled in the build to save some time at application startup. 
 
 ```scala
 lazy val moodapi = project
