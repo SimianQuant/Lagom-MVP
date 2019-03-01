@@ -1,7 +1,11 @@
 Lagom: Zero to MVP
 ===
 
-[Lagom](https://www.lagomframework.com/) is a JVM framework to build applications composed of microservices. While its architecture allows teams to smoothly transition from a Miminum Viable Product (MVP) to a large application, the standard documentation assumes that its readers already working with a large application, and focuses on addressing the issues that come with scale rather than on the steps needed to deploy the simplest version of an application. This tutorial aims to bridge that gap and show how, from first principles, a Lagom based MVP can be built and deployed. 
+An application built using microservices has clear advantages over a monolithic one when it needs to scale, however the conventional wisdom is that a microservice architecture is prohibitively complex when building the first iteration of a product. The conventional wisdom is reinforced by the dense and soporific documentation of most microservice frameworks (Lagom being a prime example). 
+
+The thesis of this tutorial is that with Lagom, building an MVP using decoupled microservices required roughly the same amount of effort as building one as a monolithic application. This requires breaking with the "best practices" of the framework, however the flexibility of the architecture allows these to be reincorporated as and when required. Therefore, if you start out using microservices, you won't need to waste time re-engineering your whole application once the product gains traction and the infrastructure needs to scale. 
+
+The tutorial does not assume prior knowledge of Lagom, however it assumes that you are reasonably fluent in Scala, Play and sbt, or can interpolate from the context. If you follow along till the end, you should have an application with a Play frontend connected to a Lagom backend deployed on a cloud server (with HTTPS). 
 
 ## About the Author
 

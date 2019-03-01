@@ -1,3 +1,0 @@
-Target Audience and Prerequisites
-===
-
