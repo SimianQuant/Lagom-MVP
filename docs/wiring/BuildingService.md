@@ -50,3 +50,6 @@ final class MoodServiceImpl extends MoodService {
   }
 }
 ```
+
+## Implementing the Application
+

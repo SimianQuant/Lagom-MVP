@@ -5,7 +5,7 @@ import concurrent.Future
 
 final class MoodServiceImpl extends MoodService {
 
-  override final def greet: ServiceCall[String, String] = ServiceCall {name =>
+  override final def greet: ServiceCall[String, String] = ServiceCall { name =>
     Future.successful(s"hello $name")
   }
 }

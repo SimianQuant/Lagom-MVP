@@ -6,6 +6,7 @@ lazy val moodapi = project
 lazy val moodimpl = project
   .in(file("moodimpl"))
   .settings(Settings.commonSettings("moodimpl"))
+  .settings(libraryDependencies += "com.softwaremill.macwire" %% "macros" % Settings.versions.macwire % "provided")
   .dependsOn(moodapi)
   .enablePlugins(LagomScala)
 

@@ -1,6 +1,7 @@
 object Settings {
   object versions {
-    val project = "0.1.0-SNAPSHOT"
+    val macwire: String = "2.2.5"
+    val project: String = "0.1.0-SNAPSHOT"
     val scala: String = "2.12.8"
   }
 
