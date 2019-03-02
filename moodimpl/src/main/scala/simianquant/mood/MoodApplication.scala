@@ -10,16 +10,16 @@ import play.api.libs.ws.ahc.AhcWSComponents
 abstract class MoodApplication(context: LagomApplicationContext)
     extends LagomApplication(context)
     with AhcWSComponents {
-  override lazy val lagomServer = serverFor[MoodService](wire[MoodServiceImpl])
+  override final lazy val lagomServer = serverFor[MoodService](wire[MoodServiceImpl])
 }
 
 abstract class MoodApplicationLoader extends LagomApplicationLoader {
-  override def loadDevMode(ctx: LagomApplicationContext) = new MoodApplication(ctx) with LagomDevModeComponents
-  override def describeService = Some(readDescriptor[MoodService])
+  override final def loadDevMode(ctx: LagomApplicationContext) = new MoodApplication(ctx) with LagomDevModeComponents
+  override final def describeService = Some(readDescriptor[MoodService])
 }
 
-class MoodApplicationLoaderDev extends MoodApplicationLoader {
-  override def load(ctx: LagomApplicationContext) = new MoodApplication(ctx) {
+final class MoodApplicationLoaderDev extends MoodApplicationLoader {
+  override final def load(ctx: LagomApplicationContext) = new MoodApplication(ctx) {
     override def serviceLocator = ServiceLocator.NoServiceLocator
   }
 }
@@ -28,6 +28,6 @@ final class MoodApplicationStatic(ctx: LagomApplicationContext)
     extends MoodApplication(ctx)
     with ConfigurationServiceLocatorComponents
 
-class MoodApplicationLoaderStatic extends MoodApplicationLoader {
-  override def load(ctx: LagomApplicationContext) = new MoodApplicationStatic(ctx)
+final class MoodApplicationLoaderStatic extends MoodApplicationLoader {
+  override final def load(ctx: LagomApplicationContext) = new MoodApplicationStatic(ctx)
 }

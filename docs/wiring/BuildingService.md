@@ -53,3 +53,4 @@ final class MoodServiceImpl extends MoodService {
 
 ## Implementing the Application
 
+The final step to building a microservice is to define an application that wires all of the components of the microservice together, and an application loader that defines how to start the service. 
