@@ -14,5 +14,4 @@ trait MoodService extends Service {
       )
       .withAutoAcl(true)
   }
-
 }
